@@ -1,0 +1,7 @@
+.env
+app/__pycache__/
+*.pyc
+.venv
+__pycache__
+.zen/
+package-lock.json
