@@ -1,100 +1,99 @@
-# Système de gestion de cabinet médical
+#  Medical Office Information System
 
-La gestion manuelle d’un cabinet médical engendre des flux d'informations complexes, augmentant le risque d'erreurs, de pertes de données et d'inefficacité opérationnelle. Face à ces enjeux, la transformation numérique devient un levier indispensable pour optimiser la prise en charge des patients.
+## Project Overview
 
-## Objectifs
-Nous avons conçu un système d'information dédié à l'automatisation des processus cliniques. Ce projet vise à réduire la marge d’erreur humaine, à fluidifier l'accès aux soins et à centraliser l'historique médical des patients.
+Managing a medical office involves sensitive data, complex workflows and constant interactions between patients, doctors and administrators. Manual or fragmented systems increase the risk of errors and reduce efficiency.
 
-La réussite de ce projet repose sur une démarche structurée en trois phases clés :
+This project provides a complete Information System that digitalizes and optimizes all medical office activities, from appointment scheduling to medical record management and administrative operations.
 
-- **Analyse du besoin :** Identification précise des acteurs et des flux de données.
+---
 
-- **Conception rigoureuse :** Modélisation des processus métier via des diagrammes de flux et de données.
+## Project Objectives
 
-- **Implémentation technique :** Développement d'une plateforme robuste avec une interface utilisateur dynamique et sécurisée.
+The goal of this system is to offer a centralized, secure and reliable platform that improves the quality of medical services and administrative efficiency.
 
-## Analyse et Conception 
+It allows:
+- Better organization of patient data
+- Easier appointment management
+- Digital medical records and prescriptions
+- Improved coordination between doctors and administration
 
+The system was developed following a structured approach based on business analysis, data modeling and full-stack implementation.
 
-- **Flux de données (DFD) :** Le DFD explique comment l'information circule entre les patients, les médecins, la direction et le système.
+---
+
+## System Analysis and Design
+
+### Data Flow Diagram (DFD)
+Describes how data moves between patients, doctors, management and the system.
 
 ![DFD](docs/DFD.drawio.png)
 
-- **Dépendances des Données (GDD) :** illustre les intérdépendances entre les 6 processus que gère notre application.
+### Global Dependency Diagram (GDD)
+Represents the relationships and dependencies between the main business processes.
 
 ![GDD](docs/GDD.png)
 
-- **Modèle Logique des Données (MLD) :** détaille les tables,
-les colonnes et les clés primaires et étrangères et donne la structure de la base de donnée MySQL.
+### Logical Data Model (MLD)
+Defines the structure of the database including tables, attributes and relationships used in MySQL.
 
 ![MLD](docs/MLD.drawio.png)
 
+---
 
+## Technology Stack
 
-### Stack Technique
+- Frontend: React  
+- Backend: FastAPI (REST API with Swagger documentation)  
+- Database: MySQL  
 
-- Frontend : React (Gestion de l'interface utilisateur).
+---
 
-- Backend : FastAPI (API REST rapide et documentée via Swagger).
-
-- Base de données : MySQL (Persistance des données).
-
-## Structure du projet
-Pour un projet de "Système d'Information", la propreté de l'arborescence est cruciale :
-
-
-```bash
-
-├── docs/               # DFD, MLD, GDD et rapport de conception
-├── backend/            # Code FastAPI
-├── frontend/           # Code React
-├── mock_data/          # Scripts pour remplir des tables
+## Project Structure
+├── docs/ # Diagrams (DFD, MLD, GDD) and documentation
+├── backend/ # FastAPI application
+├── frontend/ # React application
+├── mock_data/ # Database seeding scripts
 └── README.md
 
-```
-## Comment l'utiliser ?
+---
 
-1) Clonage du repo.
+## How to Run
 
-2) Configuration de la base de données MySQL.
+1. Clone the repository  
+2. Configure the MySQL database  
+3. Install backend dependencies  
 
-3) Installer les dépendances
-```bash
 pip install -r requirements.txt
-```
 
-4) Lancement du backend
+4. Start the backend  
 
-```bash
 uvicorn backend.main:app --reload
-```
-5) Lancement du frontend
-```bash
+
+5. Start the frontend  
+
 cd frontend
 npm start
-```
-6) Optionnel : Utiliser les script avec la mock_data pour remplir les tables.
 
-```bash
-python3 mock_data/seed.py
-python3 mock_data/seed2.py
-```
 
-### Apérçu :
-Quelques exemples des fonctionnalités gérées par notre application web:
+---
 
-**Pour le patient :** La prise, modification ou annulation de rendez-vous:
-![Ordonnace digitale](docs/prise_de_rdv.png)
+## Application Features
 
-**Pour le médecin :** La rédaction d'ordonnances digitales.
-![Ordonnace digitale](docs/ordonnance.png)
+Patient: online appointment booking, modification and cancellation  
+Doctor: digital prescriptions and medical records  
+Administration: staff and leave management  
 
-**Pour la direction :** la gestion des demandes de congés.
-![Gestion des congé](docs/gestion_congé.png)
+---
 
-## Ce projet est fait par
-- Lina Raoui
-- Assmaa El Hidani 
-- Salma Tammari
+## Team
 
-Trois étudiantes en Génie de la Data à l'Ensias dans le cadre du module "Méthodologie de développement des Système d'Information" - Année scolaire 2025/2026.
+This project was developed by:
+
+- Lina Raoui  
+- Assmaa El Hidani  
+- Salma Tammari  
+
+Data Engineering students at ENSIAS  
+Academic year 2025–2026
+
